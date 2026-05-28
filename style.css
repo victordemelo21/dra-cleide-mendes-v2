@@ -63,6 +63,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+p, blockquote {
+  font-family: 'Inter';
+}
+
 .container {
   width: min(100% - 32px, var(--container));
   margin: 0 auto;
@@ -156,46 +160,102 @@ a {
 .btn:hover {
   transform: translateY(-2px);
 }
-
 .btn-primary {
-  background: var(--color-primary-dark);
+  background: linear-gradient(
+    135deg,
+    #b89367 0%,
+    #e8d3b0 100%
+  );
+
   color: #fff;
-  box-shadow: 0 14px 35px rgba(138, 94, 134, 0.25);
+
+  box-shadow:
+    0 10px 35px rgba(184, 147, 103, 0.35);
+
+  border: none;
 }
 
 .btn-primary:hover {
-  background: #734f71;
+  transform: translateY(-3px);
+
+  background: linear-gradient(
+    135deg,
+    #a67d52 0%,
+    #d8c09a 100%
+  );
 }
 
 .btn-secondary {
-  color: var(--color-primary-dark);
-  background: transparent;
-  border-color: var(--color-border);
+  color: #f4e7d4;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
 }
 
 .btn-secondary:hover {
-  background: #fff;
-  box-shadow: var(--shadow-card);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.34);
+  transform: translateY(-2px);
 }
 
 .btn-light {
-  background: #fff;
-  color: var(--color-primary-dark);
-  box-shadow: var(--shadow-card);
+  padding: 0.5rem 0;
+  line-height: normal;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #b89367 0%,
+    #e8d3b0 100%
+  );
+  color: #fff;
+  box-shadow:
+    0 10px 35px rgba(184, 147, 103, 0.35);
+  border: none;
+}
+.btn-light:hover {
+  transform: translateY(-3px);
+  background: linear-gradient(
+    135deg,
+    #a67d52 0%,
+    #d8c09a 100%
+  );
 }
 
-.btn-small {
+a.btn-small {
   min-height: 40px;
   padding: 0 18px;
-  background: var(--color-primary-dark);
+  background: linear-gradient(135deg, #b89367 0%, #e8d3b0 100%);
   color: #fff;
+  border: none;
 }
-
+a.btn-small:hover {
+  background: linear-gradient(135deg, #b89367 0%, #d8c09a 100%);
+}
 /* HERO */
 .hero {
   position: relative;
   overflow: hidden;
   padding: 92px 0 70px;
+  padding: 110px 0 90px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(36, 22, 27, 0.88) 0%,
+      rgba(36, 22, 27, 0.72) 42%,
+      rgba(36, 22, 27, 0.45) 70%,
+      rgba(36, 22, 27, 0.25) 100%
+    ),
+    url("./assets/hero-background.png");
+
+  background-size: cover;
+  background-position: center;
+}
+.hero h1,
+.hero p,
+.hero .hero-info span,
+.hero .eyebrow {
+  color: #fff;
 }
 
 .hero::before {
@@ -223,8 +283,9 @@ a {
   margin-bottom: 18px;
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(195, 152, 195, 0.14);
-  color: var(--color-primary-dark);
+  background: rgba(255, 255, 255, 0.08);
+  color: #f1d5b6;
+  border: 1px solid rgba(255,255,255,0.12);
   font-weight: 800;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
@@ -234,6 +295,7 @@ a {
 h1,
 h2,
 h3 {
+  font-family: 'Cormorant Garamond';
   color: var(--color-title);
   line-height: 1.12;
   letter-spacing: -0.04em;
@@ -241,14 +303,16 @@ h3 {
 
 h1 {
   max-width: 720px;
-  font-size: clamp(2.55rem, 7vw, 5.15rem);
-  margin-bottom: 24px;
+  font-family: 'Cormorant Garamond';
+  font-size: clamp(3rem, 7vw, 5.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.05em;
+  margin-bottom: 28px;
 }
-
 .hero-content p {
   max-width: 620px;
   font-size: 1.12rem;
-  color: var(--color-muted);
+  color: rgba(255, 255, 255, 0.82);
   margin-bottom: 30px;
 }
 
@@ -266,40 +330,17 @@ h1 {
 }
 
 .hero-info span {
-  padding: 8px 12px;
+  padding: 10px 14px;
   border-radius: 999px;
-  background: #fff;
-  color: var(--color-muted);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255,255,255,0.88);
   font-size: 0.88rem;
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
 }
-
-.hero-image {
-  position: relative;
-  border-radius: 42px;
-  overflow: hidden;
-  box-shadow: var(--shadow-soft);
-  border: 10px solid #fff;
-  background: #fff;
-}
-
-.hero-image::after {
-  content: "Naturalidade • Estratégia • Cuidado";
-  position: absolute;
-  left: 22px;
-  bottom: 22px;
-  padding: 10px 16px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.88);
-  color: var(--color-primary-dark);
-  font-weight: 800;
-  font-size: 0.82rem;
-  backdrop-filter: blur(10px);
-}
-
-.hero-image img {
-  height: min(620px, 78vh);
-  object-fit: cover;
+.hero-info i {
+  color: #e8d3b0;
+  font-size: 0.95rem;
 }
 
 /* HIGHLIGHTS */
@@ -340,7 +381,7 @@ h1 {
 
 /* GENERAL SECTIONS */
 .section {
-  padding: 84px 0;
+  padding: 120px 8%;
 }
 
 .section-heading {
@@ -484,7 +525,6 @@ blockquote {
   color: #fff;
   box-shadow: var(--shadow-soft);
 }
-
 .cta-box .eyebrow {
   background: rgba(255, 255, 255, 0.16);
   color: #fff;
