@@ -853,3 +853,7 @@ blockquote {
     height: 260px;
   }
 }
+
+.gallery-grid img:nth-child(4) {
+  grid-row: span 3;
+}
