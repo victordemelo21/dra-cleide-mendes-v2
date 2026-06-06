@@ -855,5 +855,5 @@ blockquote {
 }
 
 .gallery-grid img:nth-child(4) {
-  grid-row: span 3;
+  grid-row: span 2;
 }
