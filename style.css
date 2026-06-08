@@ -853,3 +853,46 @@ blockquote {
     height: 260px;
   }
 }
+.gallery-grid img:nth-child(2) {
+  aspect-ratio: 4 / 5;
+  object-position: top;
+}
+
+.gallery-grid img:nth-child(4) {
+  aspect-ratio: 3 / 4;
+  height:max-content;
+  grid-row: span 2;
+  object-position: center;
+}
+.gallery-grid img:nth-child(5) {
+  aspect-ratio: 3/3;
+  object-position: bottom;
+  grid-row: span 2;
+  height: max-content;
+}
+.gallery-grid img:nth-child(6){
+  height: max-content;
+  aspect-ratio: 5/6;
+  object-position: center;
+  grid-row: span 2;
+}
+.gallery-grid img:first-child {
+  object-position: center top;
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  align-items: stretch;
+}
+.gallery-grid img:nth-child(8) {
+  aspect-ratio: 3/5;
+  object-position: top;
+  grid-row: span 2  ;
+  height: max-content;
+}
+.gallery-grid img:nth-child(7) {
+  aspect-ratio: 1/1;
+  object-position: center;
+  height: max-content;
+}
