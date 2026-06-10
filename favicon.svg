@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="cmGradient" x1="18%" y1="12%" x2="82%" y2="88%">
+      <stop offset="0%" stop-color="#D79AD6"/>
+      <stop offset="100%" stop-color="#A65AA3"/>
+    </linearGradient>
+  </defs>
+
+  <!-- <rect width="64" height="64" fill="#FAF7FA"/> -->
+
+  <circle cx="32" cy="32" r="27" fill="url(#cmGradient)" />
+
+  <text
+    x="32"
+    y="34"
+    text-anchor="middle"
+    dominant-baseline="middle"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="21"
+    font-weight="700"
+    fill="#FFFFFF"
+    letter-spacing="0.5"
+  >CM</text>
+</svg>
